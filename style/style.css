@@ -19,7 +19,7 @@ body {
 
 @font-face {
   font-family: "Pixel-Unicode";
-  src: local("Pixel-Unicode"), url("../fonts/Pixel-UniCode.ttf");
+  src: local("Pixel-Unicode"), url("/fonts/Pixel-UniCode.ttf");
 }
 
 h1,
@@ -54,7 +54,7 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../images/logo2.png);
+  background: url(/images/logo2.png);
   width: 500px;
   height: 164px;
   background-repeat: no-repeat;
