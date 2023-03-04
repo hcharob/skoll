@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sköll</title>
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/menu-burger.css" />
+    <!-- Importation des polices de caractère -->
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@1,2&f[]=ranade@2,1&f[]=cabinet-grotesk@1&f[]=panchang@1&f[]=sora@2,1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importation des librairies pour le javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/circular-revealer@0.0.8/dist/index.iife.js"></script>
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <!-- Menu burger -->
+    <header>
+      <div>
+        <button class="header_bouton nav-btn-js" type="button">
+          <div class="ligneBurger"></div>
+          <div class="ligneBurger"></div>
+          <div class="ligneBurger"></div>
+        </button>
+        <nav class="header_nav nav-js" data-active="false">
+          <ul class="header_menu">
+            <li class="header_menu_item"><a href="#synopsis">Synopsis</a></li>
+            <li class="header_menu_item"><a href="#approche">Approche</a></li>
+            <li class="header_menu_item">
+              <a href="#gameplay">Gameplay et mécaniques</a>
+            </li>
+            <li class="header_menu_item">
+              <a href="#equipe">Équipe et processus de production</a>
+            </li>
+
+            <li class="header_menu_item">
+              <a href="#signes">Signes et feedback</a>
+            </li>
+            <li class="header_menu_item">
+              <a href="#difficulte">Difficulté</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Conteneur principal -->
+    <main class="conteneur">
+      <section class="accueil">
+        <div class="logo"></div>
+      </section>
+      <!-- Conteneur principal -->
+      <section class="skoll">
+        <!-- Section 1 - Synopsis -->
+        <section class="synopsis" id="synopsis">
+          <div class="texte-synop">
+            <h2>Conception du jeu</h2>
+            <p>
+              Dans le jeu <span>Sköll</span>, les joueurs incarnent un
+              travailleur qui se retrouve piégé dans un bureau mystérieux après
+              les heures de travail, forcé de jouer une série de jeux de tables
+              mortels avec un <span> étranger sinistre.</span>
+            </p>
+            <p>
+              Au fur et à mesure que le joueur progresse dans le jeu, il doit
+              utiliser son intelligence et sa stratégie pour surpasser son
+              adversaire et survivre aux défis de plus en plus
+              <span>terrifiants.</span>
+            </p>
+            <p>
+              Avec une atmosphère sombre et menaçante et un gameplay intense,
+              <span>Sköll</span> est une expérience
+              <span>d'horreur</span> glaçante qui tiendra les joueurs en haleine
+              jusqu'au bout.
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2 - Approche -->
+        <section class="approche">
+          <div class="boite_approche" id="approche">
+            <img src="/images/cartes2.png" alt="" />
+            <div class="texte_approche">
+              <h3>Approche bottom-up</h3>
+              <p>
+                Le concept du jeu a été créé avec l’approche
+                <span>bottom-up</span>
+                c’est-à-dire que les éléments de gameplay ont été définis avant
+                le design.
+              </p>
+              <p>
+                Pour le jeu, j’ai commencé par avoir en tête un concept de jeu
+                de cartes, inspiré par le jeu <span>Inscryption.</span> Ensuite,
+                j’ai pensé à un univers qui pourrait donner raison au jeu.
+                Pourquoi le joueur doit-il jouer au jeu de cartes? Peut-être
+                qu’il n’a pas le choix, et qu’il est coincé. Pourquoi est-il
+                coincé? Parce que quelqu’un le retient ici, etc.
+              </p>
+              <p>
+                De cette manière. Il peut être plus facile de commencer à penser
+                à un concept de jeu puisqu’on part de quelque chose d’assez
+                simple. Ensuite, il s'agit de créer et d'ajuster la forme du jeu
+                en fonction des mécaniques de gameplay qu'on a choisies.
+              </p>
+            </div>
+          </div>
+          <!-- Section 3 - Gameplay -->
+
+          <div class="gameplay" id="gameplay">
+            <div class="texte_gameplay">
+              <h3>Gameplay</h3>
+              <p>
+                Sköll est un jeu d’horreur fait en 3D avec un style pixelisé.
+              </p>
+              <p>Il sera divisé en <span>deux parties:</span> la première s'agit de jouer à des jeux de tables avec
+                l'étranger, par exemple des jeux de cartes ou bien répondre à
+                des énigmes, etc.</p>
+              <p>
+                Si le joueur <span>réussit</span>, il pourra sortir à l'extérieur du bureau
+                un court moment pour explorer et trouver un moyen de s'enfuir.
+              </p>
+              <p>
+                Plus le jeu avance et que le joueur réussit, plus il aura
+                d’outils pour sortir. Si le joueur <span>échoue,</span> son sort sera mortel.
+                Il est cependant possible qu'à la suite de ses défaites, le
+                personnage ne désire plus s'enfuir.
+              </p>
+            </div>
+            <div class="texte_gameplay">
+              <h3>Mécaniques</h3>
+              <p>
+                Le joueur pourra bouger la caméra et interagir avec les
+                différents objets du jeu avec la souris. Il pourra aussi se
+                déplacer avec les touches <span>W A S D </span>du clavier.
+              </p>
+              <p>
+                Les différentes règles des jeux dépendront du type de jeu. Par
+                exemple, les cartes sont inspirées du le jeu "roche, papier,
+                ciseaux".
+              </p>
+              <p>
+                Les genres de jeux possibles sont: Trouver la balle sous le
+                verre, le jeu de cartes, blabla, finalement une partie d'échecs.
+              </p>
+              <p>
+                L'exploration extérieure aura aussi une <span>limite de temps</span> réelle.
+                Il est possible que le joueur ne trouve rien lors de sa
+                recherche.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section 4 - Équipe -->
+        <section class="equipe" id="equipe">
+          <div class="boite_equipe">
+            <div class="texte_processus">
+              <h3>Équipe et processus de production</h3>
+              <p>
+                Il y a 4 phases dans la création d’un projet comme celui-ci:
+              </p>
+              <ol>
+                <li>La phase de conception</li>
+                <li>La préproduction</li>
+                <li>La production</li>
+                <li>La phase live</li>
+              </ol>
+              <p>
+                Compte tenu du temps limité disponible, et du fait que je sois
+                seule, je dirais que je viens à peine de rentrer dans l'étape de
+                production.
+              </p>
+            </div>
+            <div class="texte_equipe">
+              <p>
+                Pour ce qui est de la présentation des équipes et rôles de
+                chacun, le diagramme d’ubisoft est divisé en deux branches:
+                <span>l’équipe de gestion</span>, qui supervise les délais et ressources et
+                <span>l’équipe de production de contenu</span>, qui supervise la création du
+                contenu.
+              </p>
+
+              <p>
+                Dans le cadre de ce projet, je devais effectuer toutes les
+                tâches, donc j’ai dû occuper tous les rôles. Cependant,
+                personnellement, parmi toutes les sous-catégories qu’il y a, je
+                dirais que mon rôle fait davantage partie de l’équipe de game
+                design et level design.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section 5 - Signes -->
+        <section class="signes" id="signes">
+          <h3>Signes et feedback</h3>
+          <div class="etranger_images">
+            <p class="titre_carrousel">L'étranger</p>
+            <div class="carrousel">
+              <figure>
+                <img class="etranger1" src="/images/etranger1.png" />
+                <figcaption>Neutre</figcaption>
+              </figure>
+
+              <figure>
+                <img class="etranger2" src="/images/etranger2.png" />
+                <figcaption>Joueur</figcaption>
+              </figure>
+
+              <figure>
+                <img class="etranger3" src="/images/etranger3.png" />
+                <figcaption>Maléfique</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="texte_signes">
+            <div class="paragraphe_signes">
+              <p>
+                Les <span>signes</span> vous permettent d’orienter l’action du personnage. Le
+                <span>feedback</span> est une réponse aux actions du joueur.
+              </p>
+              <p>
+                Il fournit également des informations sur les conséquences de
+                ces actions et sur les manières d’améliorer les performances du
+                joueur.
+              </p>
+            </div>
+
+            <div class="paragraphe_signes">
+              <p>
+                En ce qui concerne mon jeu, les signes concerneraient beaucoup
+                plus la partie exploration du jeu, donc ajouter des signes
+                visuels, par exemple un changement de lumière, qui indique au
+                joueur quel objet est <span> important.</span>
+              </p>
+              <p>
+                Au final, l'objectif' est que les joueurs puissent jouer au jeu
+                et avancer.
+              </p>
+            </div>
+            <div class="paragraphe_signes">
+              <p>
+                En matière de feedback, ça va être plus du côté jeux de tables
+                avec les différentes “sprites” du jeu.
+              </p>
+              <p>
+                Je voulais aussi avoir une différence marquée avec l’autre choix
+                de l’histoire. Si le joueur coopère avec <span>l’étranger,</span> celui-ci a l’air
+                plus sympathique. Il y aura aussi des sons différents lorsque le joueur fait
+                un choix qui est plus en sa faveur.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section 6 - Difficulté -->
+        <section class="difficulte" id="difficulte">
+          <h3>Difficulté</h3>
+          <p>
+            Les systèmes de difficulté sont généralement séparés en deux
+            catégories:
+            <br><span>le libre choix et le système hybride.</span>
+          </p>
+          <p>
+            Le libre choix est quand le joueur choisit son propre type de
+            difficulté, tandis que pour le système hybride, c’est le jeu qui
+            opère des ajustements de difficultés dynamiques qui sont invisibles
+            au joueur.
+          </p>
+          <p>
+            Les difficultés ne sont pas basées sur des valeurs spécifiques
+            absolues, mais sur une gamme de valeurs qui sont appliquées en
+            fonction de la performance du joueur.
+          </p>
+          <p>
+            Pour Sköll, je voulais un système qui est plus hybride, cependant je
+            ne voulais pas exactement qu'il soit <span>invisible.</span>
+          </p>
+          <p>
+            Je voulais que le premier jeu soit une sorte de test de difficulté
+            qui évalue la performance du joueur, et selon cette performance
+            l’étranger aurait un dialogue différent. Donc si c’est trop bas, il
+            pourra avoir un commentaire un peu insultant, ce qui je crois
+            pousserait les joueurs à s’améliorer par eux-mêmes.
+          </p>
+          <!-- Dialogue animé -->
+          <div class="animation_dialogue">
+            <img
+              class="bouton_image"
+              src="/images/bouton_petit.png"
+              onclick="startTyping()"
+              alt=""
+            />
+            <p id="dialogue_texte"></p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- Importation des scripts -->
+    <script src="/scripts/sketch.js"></script>
+    <script src="/scripts/animation-menu.js"></script>
+    <script src="/scripts/animation-dialogue.js"></script>
+  </body>
+</html>

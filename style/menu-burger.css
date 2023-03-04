@@ -1,0 +1,116 @@
+/* //////////////////////////////       Le site est fait en mode desktop first */
+/* //////////////////////////////       Navigation et Header */
+  .header_bouton {
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #6E936C;
+    border: 0;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: 40px;
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+  }
+  
+  /* //////////////////////////////       Lignes du menu */
+  .ligneBurger {
+    background-color: #161616;
+    width: 25px;
+    height: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 30%;
+  }
+  
+  /* //////////////////////////////       Style du bouton */
+  .header_bouton[data-open="true"] {
+    background-color: #161616;
+    animation-name: aggrandir;
+  }
+  
+  .header_bouton[data-open="true"] .ligneBurger {
+    background-color: #6E936C;
+  }
+  
+  .header_bouton[data-open="false"] {
+    transition: background-color 250ms linear;
+  }
+  
+  @keyframes aggrandir {
+    from {
+      transform: scale(0);
+    }
+  
+    to {
+      transform: scale(100%);
+    }
+  }
+  
+    /* //////////////////////////////       Style du menu */
+  .header_nav {
+    background-color: #6E936C;
+    position: fixed;
+    overflow: hidden;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    box-sizing: border-box;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    visibility: hidden;
+  }
+  
+  .header_nav[data-active="true"] {
+    visibility: visible;
+  }
+  
+  .header_menu {
+    padding: 2rem 1rem 1rem 2rem;
+    text-decoration: none;
+  }
+  
+  .header_menu > .header_menu_item:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+  
+    /* //////////////////////////////       Style de la liste du menu */
+  .header_menu_item a {
+    font-size: clamp(1.5rem, 0.8182rem + 3.4091vw, 3rem);
+    font-family: 'Ranade', sans-serif;
+    color: #161616;
+    text-decoration: none;
+    padding-bottom: 1rem;
+  }
+
+  .header_menu_item a:hover {
+    color: #495A42;
+  }
+
+  ul {
+    list-style-type:  decimal-leading-zero;
+    color: #161616;
+}
+
+/* //////////////////////////////       Version mobile et tablette */
+  @media screen and (max-width: 768px) {
+    .header_bouton {
+      width: 100%;
+      height: 40px;
+      border-radius: 0;
+      margin: 0;
+    }
+
+    .ligneBurger {
+      left: 50%;
+    }
+  }
+  

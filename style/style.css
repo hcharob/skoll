@@ -1,0 +1,444 @@
+/* //////////////////////////////       Style général */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow: overlay;
+  font-family: "Ranade", sans-serif;
+}
+
+/* //////////////////////////////       Polices de caractères locales */
+@font-face {
+  font-family: "Wongdongs";
+  src: local("Wongdongs"), url("/fonts/Wongdongs.otf");
+}
+
+@font-face {
+  font-family: "Pixel-Unicode";
+  src: local("Pixel-Unicode"), url("/fonts/Pixel-UniCode.ttf");
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #495a42;
+  border-radius: 3px;
+}
+
+/* //////////////////////////////       Canvas */
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.logo {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/images/logo2.png);
+  width: 500px;
+  height: 164px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 2rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 1.7727rem + 1.1364vw, 2.5rem);
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: #6E936C;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #6E936C;
+}
+
+.conteneur {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(16, 7, 11, 0.2);
+}
+
+/* //////////////////////////////       Sections */
+section {
+  height: auto;
+  scroll-snap-align: start;
+  margin: 0;
+  color: #c0bcb2;
+  border-radius: 10px;
+  text-shadow: 2px 2px 1px #10070b;
+}
+
+span {
+  color: #98222B;
+}
+
+.skoll {
+  font-size: clamp(2rem, 0.5455rem + 2.2727vw, 2.5rem);
+  background: rgba(20, 25, 18, 0);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 4rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* //////////////////////////////       Section 1 - Synopsis */
+.synopsis {
+  background-color: transparent;
+ 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  font-style: italic;
+  width: 80vw;
+}
+
+section p {
+  font-size: 0.5em;
+  margin-bottom: 1rem;
+}
+
+.accueil {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* //////////////////////////////       Section 2 - Approche */
+.approche {
+  background: rgba(20, 25, 18, 0.65);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  color: #c0bcb2;
+  padding: 4rem;
+  width: 80vw;
+}
+
+.approche p {
+  width: 40vw;
+}
+
+.boite_approche {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 2rem;
+  gap: 4rem;
+}
+
+.boite_approche img {
+  width: clamp(11.25rem, 5.1989rem + 30.2557vw, 24.5625rem);
+  height: auto;
+}
+
+/* //////////////////////////////       Section 3 - Gameplay */
+.gameplay {
+  display: flex;
+  padding-top: 2rem;
+  gap: 3rem;
+}
+
+.texte_gameplay p {
+  width: 35vw;
+}
+
+/* //////////////////////////////       Section 4 - Équipe */
+.equipe {
+  padding: 4rem;
+  
+  color: #c0bcb2;
+  border-radius: 10px;
+  width: 80vw;
+}
+
+.boite_equipe {
+  display: flex;
+  gap: 4rem;
+}
+
+.texte_processus {
+  width: 40vw;
+}
+
+.texte_equipe {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+
+ol {
+  padding-left: 2rem;
+  font-size: 0.6em;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: #495a42;
+}
+
+.images-equipe {
+  display: flex;
+  gap: 2rem;
+}
+
+.images-equipe img {
+  width: 151px;
+  height: 151px;
+}
+
+.images-equipe img:hover {
+  animation: shake 0.2s;
+  animation-iteration-count: infinite;
+}
+
+/* //////////////////////////////       Section 5 - Signes et feedback */
+.signes {
+  padding: 4rem;
+  background-color: transparent;
+}
+
+.texte_signes {
+  display: flex;
+  padding-top: 2rem;
+  gap: 4rem;
+  width: 80vw;
+  padding: 4rem;
+}
+
+.titre_carrousel {
+  font-family: "Pixel-Unicode";
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 2.5rem;
+  padding-left: 1rem;
+}
+
+.paragraphe_signes {
+  width: 35vw;
+}
+
+.etranger_images {
+  display: flex;
+  flex-direction: column;
+  background: rgba(20, 25, 18, 0.56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 2rem 1rem 2rem 1rem;
+  border-radius: 10px;
+}
+
+.carrousel {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+.carrousel img {
+  width: clamp(9.375rem, 7.9545rem + 7.1023vw, 12.5rem);
+  height: auto;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1px);
+  }
+  50% {
+    transform: translateX(1px);
+  }
+  75% {
+    transform: translateX(-1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* //////////////////////////////       Images */
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+}
+
+figcaption {
+  font-family: "Wongdongs";
+  text-transform: uppercase;
+  padding-top: 2rem;
+  letter-spacing: 5px;
+}
+
+figcaption:hover {
+  font-family: "Pixel-Unicode";
+  animation: shake 0.2s;
+  animation-iteration-count: infinite;
+  color: #98222b;
+}
+
+/* //////////////////////////////       Section 6 - Difficulté */
+.difficulte {
+  padding: 4rem;
+  width: 80vw;
+  background: rgba(20, 25, 18, 0.56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.animation_dialogue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#dialogue_texte {
+  font-family: "Press Start 2P";
+  color: #98222b;
+  text-shadow: 3px 3px #10070b;
+  text-align: center;
+}
+
+.bouton_image {
+  padding-top: 1rem;
+}
+
+.bouton_image:hover {
+  cursor: pointer;
+  animation: shake 0.2s infinite;
+}
+
+/* //////////////////////////////       Version mobile et tablette */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .skoll {
+    padding: 0;
+  }
+
+  .synopsis,
+  .approche,
+  .equipe {
+    padding: 2rem;
+    padding-right: 1rem;
+  }
+
+  .boite_approche {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .approche {
+    width: 80vw;
+    padding: 2rem;
+  }
+
+  .texte_approche {
+    padding: 2rem;
+  }
+
+  .approche p {
+    width: 80vw;
+    padding: 0 2rem 0 2rem;
+  }
+
+  .approche h3 {
+    padding: 0rem 2rem 0rem 2rem;
+  }
+
+  .gameplay {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .equipe {
+    padding: 2rem;
+  }
+
+  .boite_equipe {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .texte_processus {
+    width: 100%;
+  }
+
+  .texte_equipe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .signes {
+    padding: 0;
+    width: 80vw;
+  }
+
+  .signes h3{
+     padding: 1rem 2rem 1rem 2rem;
+  }
+
+  .carrousel {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .texte_signes {
+    flex-direction: column;
+    padding: 2rem 0 0 0;
+    gap: 0;
+  }
+
+  .paragraphe_signes {
+    width: 80vw;
+    padding: 0rem 2rem 0rem 2rem;
+  }
+
+  .difficulte {
+    padding: 2rem;
+  }
+}
