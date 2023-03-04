@@ -13,7 +13,7 @@ const noiseScale = 0.01;
   * 
   */
 function preload() {
-  img = loadImage('/images/jeu_background3.png');
+  img = loadImage('./images/jeu_background3.png');
 }
 
 /**

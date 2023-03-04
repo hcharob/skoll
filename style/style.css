@@ -14,12 +14,12 @@ body {
 /* //////////////////////////////       Polices de caractères locales */
 @font-face {
   font-family: "Wongdongs";
-  src: local("Wongdongs"), url("/fonts/Wongdongs.otf");
+  src: local("Wongdongs"), url("./fonts/Wongdongs.otf");
 }
 
 @font-face {
   font-family: "Pixel-Unicode";
-  src: local("Pixel-Unicode"), url("/fonts/Pixel-UniCode.ttf");
+  src: local("Pixel-Unicode"), url("./fonts/Pixel-UniCode.ttf");
 }
 
 h1,
