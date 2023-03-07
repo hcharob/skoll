@@ -4,7 +4,7 @@ let particles = [];
 let img;
 const num = 800;
 
-const noiseScale = 0.01;
+const noiseScale = 0.01; //change le parcours
 
 /**
   *
