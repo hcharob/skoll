@@ -4,7 +4,7 @@ let particles = [];
 let img;
 const num = 800;
 
-const noiseScale = 0.01; //change le parcours
+const noiseScale = 0.01; //change le parcours, contrôle l'échelle de buit
 
 /**
   *
@@ -44,16 +44,16 @@ function draw() {
   //dessine un rectangle,
   image(img, 0, 0, width, height);
   //dessine et place les particules sur le canvas
-  for (let i = 0; i < num; i++) {
-    let p = particles[i];
-    point(p.x, p.y);
-    let n = noise(p.x * noiseScale, p.y * noiseScale);
-    let a = TAU * n; //TAU = 2* pi, converti l'angle en X et Y
-    p.x += cos(a);
-    p.y += sin(a);
-    if (!onScreen(p)) {
-      p.x = random(width);
-      p.y = random(height);
+  for (let i = 0; i < num; i++) { 
+    let p = particles[i]; //assigne le p à une particule i dans le tableau
+    point(p.x, p.y); //dessine le point à la position actuelle de p
+    let n = noise(p.x * noiseScale, p.y * noiseScale); //génère une valeur de bruit de Perlin pour la position de p
+    let a = TAU * n; // converti la valeur de bruit en un angle en multipliant TAU, TAU = 2* pi
+    p.x += cos(a); // Met à jour la coordonnée x de p en ajoutant le cosinus de l'angle a
+    p.y += sin(a); // Met à jour la coordonnée y de p en ajoutant le cosinus de l'angle a
+    if (!onScreen(p)) { //Si la particule est hors de l'écran
+      p.x = random(width); //Met la coordonnée x à une valeur aléatoire
+      p.y = random(height); //Met la coordonnée y à une valeur aléatoire
     }
   }
 }
